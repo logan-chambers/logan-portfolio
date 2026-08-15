@@ -1,4 +1,3 @@
-```html
 <!doctype html>
 <html lang="en">
 <head>
@@ -141,11 +140,7 @@
       width:620px;
       height:620px;
       border-radius:50%;
-      background:radial-gradient(
-        circle,
-        rgba(109,140,255,.16),
-        transparent 67%
-      );
+      background:radial-gradient(circle,rgba(109,140,255,.16),transparent 67%);
       right:-160px;
       top:-140px;
       pointer-events:none
@@ -379,13 +374,21 @@
       font-size:11px;
       color:var(--accent);
       text-transform:uppercase;
-      letter-spacing:.08em
+      letter-spacing:.08em;
+      margin-bottom:8px
     }
 
     .project{
       display:flex;
       flex-direction:column;
-      min-height:280px
+      min-height:310px;
+      transition:.25s ease
+    }
+
+    .project:hover{
+      transform:translateY(-5px);
+      border-color:#34425a;
+      box-shadow:0 14px 40px rgba(0,0,0,.22)
     }
 
     .project .bottom{
@@ -410,12 +413,12 @@
       color:var(--accent)
     }
 
-    .project-github{
+    .project .github-link{
       color:var(--muted);
       font-size:14px
     }
 
-    .project-github:hover{
+    .project .github-link:hover{
       color:#fff
     }
 
@@ -626,11 +629,7 @@
       LOGAN<span>.</span>
     </a>
 
-    <button
-      class="menu"
-      id="menu"
-      aria-label="Open menu"
-    >
+    <button class="menu" id="menu" aria-label="Open menu">
       ☰
     </button>
 
@@ -649,829 +648,551 @@
 
 <main id="top">
 
-  <!-- HERO -->
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
 
-  <section class="hero">
+    <div>
 
-    <div class="wrap hero-grid">
+      <div class="eyebrow">
+        Computer Science · Illinois Tech
+      </div>
+
+      <h1>
+        Building.<br>
+        <span>Learning.</span><br>
+        Securing.
+      </h1>
+
+      <p class="hero-copy">
+        Computer Science student at Illinois Institute of Technology,
+        building my programming skills and exploring software development
+        and cybersecurity.
+      </p>
+
+      <div class="actions">
+
+        <a class="btn primary" href="#projects">
+          View projects ↓
+        </a>
+
+        <a
+          class="btn"
+          href="https://github.com/logan-chambers"
+          target="_blank"
+          rel="noopener"
+        >
+          GitHub ↗
+        </a>
+
+        <a
+          class="btn"
+          href="https://www.linkedin.com/in/logan-chambers-cybersecurity"
+          target="_blank"
+          rel="noopener"
+        >
+          LinkedIn ↗
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="terminal">
+
+      <div class="terminal-top">
+        <i class="dot"></i>
+        <i class="dot"></i>
+        <i class="dot"></i>
+      </div>
+
+      <div class="terminal-body">
+
+        <p>
+          <span class="prompt">logan@portfolio</span>:~$ whoami
+        </p>
+
+        <p>
+          Computer Science student
+        </p>
+
+        <p>
+          <span class="prompt">logan@portfolio</span>:~$ focus
+        </p>
+
+        <p>
+          software · cybersecurity · learning
+        </p>
+
+        <p>
+          <span class="prompt">logan@portfolio</span>:~$ status
+        </p>
+
+        <p>
+          building new things<span class="cursor"></span>
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ABOUT -->
+<section id="about">
+
+  <div class="wrap">
+
+    <div class="section-head">
+
+      <div>
+        <div class="eyebrow">
+          01 · About
+        </div>
+
+        <h2>
+          Learning by building.
+        </h2>
+      </div>
+
+      <p>
+        Most of what's on this site is a record of the process —
+        projects, skills, experience, and the areas I'm actively exploring.
+      </p>
+
+    </div>
+
+    <div class="about">
+
+      <p>
+        I'm studying Computer Science at Illinois Tech, with hands-on
+        experience in Python and Java.
+      </p>
+
+      <p>
+        Right now I'm focused on developing my programming fundamentals
+        and getting practical, project-based experience.
+      </p>
+
+      <p>
+        I'm especially interested in cybersecurity — I take part in
+        cybersecurity club activities and I'm working toward CTF and
+        CPTC competition experience.
+      </p>
+
+      <p>
+        I learn best by building. This portfolio is meant to grow with
+        me rather than pretend I'm finished.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- PROJECTS -->
+<section id="projects">
+
+  <div class="wrap">
+
+    <div class="section-head">
+
+      <div>
+        <div class="eyebrow">
+          02 · Projects
+        </div>
+
+        <h2>
+          Things I'm building.
+        </h2>
+      </div>
+
+      <p>
+        Projects are where I turn concepts into something I can actually
+        run, break, debug, and improve.
+      </p>
+
+    </div>
+
+
+    <div class="grid three">
+
+
+      <!-- CLUE SOLVER -->
+      <article class="card project">
+
+        <div>
+
+          <div class="status">
+            Completed
+          </div>
+
+          <h3>
+            Clue Solver
+          </h3>
+
+          <p>
+            A logic engine for the board game Clue/Cluedo. Feed it your
+            hand and the suggestions made during the game, and it uses
+            constraint-propagation deduction to determine the suspect,
+            weapon, and room when the logic becomes conclusive.
+          </p>
+
+          <div class="chips">
+
+            <span class="tag">
+              HTML
+            </span>
+
+            <span class="tag">
+              JavaScript
+            </span>
+
+            <span class="tag">
+              Logic Engine
+            </span>
+
+          </div>
+
+        </div>
+
+        <div class="bottom">
+
+          <button data-project="0">
+            View details →
+          </button>
+
+          <a
+            class="github-link"
+            href="https://github.com/logan-chambers/clue-solver"
+            target="_blank"
+            rel="noopener"
+          >
+            GitHub ↗
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- RETRO TERMINAL PORTFOLIO -->
+      <article class="card project">
+
+        <div>
+
+          <div class="status">
+            Completed
+          </div>
+
+          <h3>
+            Retro Terminal Portfolio
+          </h3>
+
+          <p>
+            A portfolio site styled as an interactive retro terminal.
+            It boots with a fake initialization sequence and ASCII logo,
+            then drops visitors into a command prompt for exploring
+            projects, skills, and information.
+          </p>
+
+          <div class="chips">
+
+            <span class="tag">
+              HTML
+            </span>
+
+            <span class="tag">
+              JavaScript
+            </span>
+
+            <span class="tag">
+              CSS
+            </span>
+
+          </div>
+
+        </div>
+
+        <div class="bottom">
+
+          <button data-project="1">
+            View details →
+          </button>
+
+          <a
+            class="github-link"
+            href="https://github.com/logan-chambers/terminal-portfolio"
+            target="_blank"
+            rel="noopener"
+          >
+            GitHub ↗
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- SPROUT BUDGET -->
+      <article class="card project">
+
+        <div>
+
+          <div class="status">
+            Completed
+          </div>
+
+          <h3>
+            Sprout Budget
+          </h3>
+
+          <p>
+            A playful budgeting app frontend inspired by modern finance
+            tools, featuring a dashboard, transactions, category budgets,
+            recurring bill detection, net worth tracking, and spending
+            trend visualizations.
+          </p>
+
+          <div class="chips">
+
+            <span class="tag">
+              HTML
+            </span>
+
+            <span class="tag">
+              JavaScript
+            </span>
+
+            <span class="tag">
+              Data Visualization
+            </span>
+
+          </div>
+
+        </div>
+
+        <div class="bottom">
+
+          <button data-project="2">
+            View details →
+          </button>
+
+          <a
+            class="github-link"
+            href="https://github.com/logan-chambers/sprout-budget"
+            target="_blank"
+            rel="noopener"
+          >
+            GitHub ↗
+          </a>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CYBERSECURITY -->
+<section id="cybersecurity">
+
+  <div class="wrap">
+
+    <div class="section-head">
 
       <div>
 
         <div class="eyebrow">
-          Computer Science · Illinois Tech
+          03 · Cybersecurity
         </div>
 
-        <h1>
-          Building.<br>
-          <span>Learning.</span><br>
-          Securing.
-        </h1>
-
-        <p class="hero-copy">
-          Computer Science student at Illinois Institute of Technology,
-          building my programming skills and exploring software development
-          and cybersecurity.
-        </p>
-
-        <div class="actions">
-
-          <a
-            class="btn primary"
-            href="#projects"
-          >
-            View projects ↓
-          </a>
-
-          <a
-            class="btn"
-            href="https://github.com/logan-chambers"
-            target="_blank"
-            rel="noopener"
-          >
-            GitHub ↗
-          </a>
-
-          <a
-            class="btn"
-            href="https://www.linkedin.com/in/logan-chambers-cybersecurity"
-            target="_blank"
-            rel="noopener"
-          >
-            LinkedIn ↗
-          </a>
-
-        </div>
+        <h2>
+          Security, in progress.
+        </h2>
 
       </div>
 
-
-      <div class="terminal">
-
-        <div class="terminal-top">
-          <i class="dot"></i>
-          <i class="dot"></i>
-          <i class="dot"></i>
-        </div>
-
-        <div class="terminal-body">
-
-          <p>
-            <span class="prompt">logan@portfolio</span>:~$ whoami
-          </p>
-
-          <p>
-            Computer Science student
-          </p>
-
-          <p>
-            <span class="prompt">logan@portfolio</span>:~$ focus
-          </p>
-
-          <p>
-            software · cybersecurity · learning
-          </p>
-
-          <p>
-            <span class="prompt">logan@portfolio</span>:~$ status
-          </p>
-
-          <p>
-            building new things<span class="cursor"></span>
-          </p>
-
-        </div>
-
-      </div>
+      <p>
+        Cybersecurity is an area I'm actively exploring through club
+        activities, CTF practice, and coursework.
+      </p>
 
     </div>
 
-  </section>
 
+    <div class="grid three">
 
-  <!-- ABOUT -->
-
-  <section id="about">
-
-    <div class="wrap">
-
-      <div class="section-head">
-
-        <div>
-
-          <div class="eyebrow">
-            01 · About
-          </div>
-
-          <h2>
-            Learning by building.
-          </h2>
-
-        </div>
-
-        <p>
-          Most of what's on this site is a record of the process —
-          projects, skills, experience, and the areas I'm actively exploring.
-        </p>
-
-      </div>
-
-
-      <div class="about">
-
-        <p>
-          I'm studying Computer Science at Illinois Tech, with hands-on
-          experience in Python and Java.
-        </p>
-
-        <p>
-          Right now I'm focused on developing my programming fundamentals
-          and getting practical, project-based experience.
-        </p>
-
-        <p>
-          I'm especially interested in cybersecurity — I take part in
-          cybersecurity club activities and I'm working toward CTF and
-          CPTC competition experience.
-        </p>
-
-        <p>
-          I learn best by building. This portfolio is meant to grow with
-          me rather than pretend I'm finished.
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- PROJECTS -->
-
-  <section id="projects">
-
-    <div class="wrap">
-
-      <div class="section-head">
-
-        <div>
-
-          <div class="eyebrow">
-            02 · Projects
-          </div>
-
-          <h2>
-            Things I'm building.
-          </h2>
-
-        </div>
-
-        <p>
-          Projects are where I turn concepts into something I can actually
-          run, break, debug, and improve.
-        </p>
-
-      </div>
-
-
-      <div class="grid three">
-
-
-        <!-- CLUE SOLVER -->
-
-        <article class="card project">
-
-          <div>
-
-            <div class="status">
-              Completed
-            </div>
-
-            <h3>
-              Clue Solver
-            </h3>
-
-            <p>
-              A deduction engine for Clue/Cluedo that uses constraint
-              propagation to determine the hidden suspect, weapon, and
-              room from the information revealed during a game.
-            </p>
-
-            <div class="chips">
-
-              <span class="tag">
-                HTML
-              </span>
-
-              <span class="tag">
-                JavaScript
-              </span>
-
-              <span class="tag">
-                Logic Engine
-              </span>
-
-            </div>
-
-          </div>
-
-
-          <div class="bottom">
-
-            <button data-project="0">
-              View details →
-            </button>
-
-            <a
-              class="project-github"
-              href="https://github.com/logan-chambers/clue-solver"
-              target="_blank"
-              rel="noopener"
-            >
-              GitHub ↗
-            </a>
-
-          </div>
-
-        </article>
-
-
-        <!-- RETRO TERMINAL -->
-
-        <article class="card project">
-
-          <div>
-
-            <div class="status">
-              Completed
-            </div>
-
-            <h3>
-              Retro Terminal Portfolio
-            </h3>
-
-            <p>
-              An interactive retro terminal portfolio where visitors
-              explore my projects, skills, experience, and background by
-              typing commands instead of scrolling through a traditional
-              website.
-            </p>
-
-            <div class="chips">
-
-              <span class="tag">
-                HTML
-              </span>
-
-              <span class="tag">
-                JavaScript
-              </span>
-
-              <span class="tag">
-                CSS
-              </span>
-
-            </div>
-
-          </div>
-
-
-          <div class="bottom">
-
-            <button data-project="1">
-              View details →
-            </button>
-
-            <a
-              class="project-github"
-              href="https://github.com/logan-chambers/terminal-portfolio"
-              target="_blank"
-              rel="noopener"
-            >
-              GitHub ↗
-            </a>
-
-          </div>
-
-        </article>
-
-
-        <!-- SPROUT BUDGET -->
-
-        <article class="card project">
-
-          <div>
-
-            <div class="status">
-              Completed
-            </div>
-
-            <h3>
-              Sprout Budget
-            </h3>
-
-            <p>
-              A frontend budgeting app demo with a financial dashboard,
-              transactions, category budgets, recurring bills, and
-              interactive spending and net worth visualizations.
-            </p>
-
-            <div class="chips">
-
-              <span class="tag">
-                HTML
-              </span>
-
-              <span class="tag">
-                JavaScript
-              </span>
-
-              <span class="tag">
-                Data Visualization
-              </span>
-
-            </div>
-
-          </div>
-
-
-          <div class="bottom">
-
-            <button data-project="2">
-              View details →
-            </button>
-
-            <a
-              class="project-github"
-              href="https://github.com/logan-chambers/sprout-budget"
-              target="_blank"
-              rel="noopener"
-            >
-              GitHub ↗
-            </a>
-
-          </div>
-
-        </article>
-
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- CYBERSECURITY -->
-
-  <section id="cybersecurity">
-
-    <div class="wrap">
-
-      <div class="section-head">
-
-        <div>
-
-          <div class="eyebrow">
-            03 · Cybersecurity
-          </div>
-
-          <h2>
-            Security, in progress.
-          </h2>
-
-        </div>
-
-        <p>
-          Cybersecurity is an area I'm actively exploring through club
-          activities, CTF practice, and coursework.
-        </p>
-
-      </div>
-
-
-      <div class="grid three">
-
-        <article class="card cyber-card">
-
-          <h3>
-            Cybersecurity Club
-          </h3>
-
-          <p>
-            Participation and activities in the cybersecurity club.
-            This section will grow as I gain more hands-on experience.
-          </p>
-
-        </article>
-
-
-        <article class="card cyber-card">
-
-          <h3>
-            CTFs
-          </h3>
-
-          <p>
-            A place to document CTF participation, challenges attempted,
-            and writeups as I complete them.
-          </p>
-
-        </article>
-
-
-        <article class="card cyber-card">
-
-          <h3>
-            CPTC
-          </h3>
-
-          <p>
-            Preparation notes and, eventually, competition experience
-            for the Collegiate Penetration Testing Competition.
-          </p>
-
-        </article>
-
-      </div>
-
-
-      <div style="height:18px"></div>
-
-
-      <div class="grid three">
-
-        <article class="card">
-
-          <h3>
-            Web application security
-          </h3>
-
-          <p>
-            Learning the fundamentals of how web apps get attacked
-            and defended.
-          </p>
-
-        </article>
-
-
-        <article class="card">
-
-          <h3>
-            Penetration testing
-          </h3>
-
-          <p>
-            Studying methodology and tooling — not yet professional
-            experience.
-          </p>
-
-        </article>
-
-
-        <article class="card">
-
-          <h3>
-            Red teaming
-          </h3>
-
-          <p>
-            Early exposure through club activities and self-study.
-          </p>
-
-        </article>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- EXPERIENCE -->
-
-  <section id="experience">
-
-    <div class="wrap">
-
-      <div class="section-head">
-
-        <div>
-
-          <div class="eyebrow">
-            04 · Experience
-          </div>
-
-          <h2>
-            Work experience.
-          </h2>
-
-        </div>
-
-        <p>
-          Professional experience that has helped me build reliability,
-          communication, and real-world problem solving.
-        </p>
-
-      </div>
-
-
-      <div class="line-list">
-
-        <div class="row">
-
-          <div class="date">
-            MAY 2025 — PRESENT
-          </div>
-
-          <div>
-
-            <div class="role">
-              Food and Beverage Expert
-            </div>
-
-            <div class="company">
-              Target · Glendale Heights, Illinois
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <div class="row">
-
-          <div class="date">
-            NOV 2023 — MAY 2025
-          </div>
-
-          <div>
-
-            <div class="role">
-              Line Cook
-            </div>
-
-            <div class="company">
-              WingStop
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- EDUCATION -->
-
-  <section id="education">
-
-    <div class="wrap">
-
-      <div class="section-head">
-
-        <div>
-
-          <div class="eyebrow">
-            05 · Education
-          </div>
-
-          <h2>
-            Illinois Tech.
-          </h2>
-
-        </div>
-
-        <p>
-          Building the computer science foundation that supports my
-          software and cybersecurity interests.
-        </p>
-
-      </div>
-
-
-      <div class="card">
-
-        <div class="date">
-          EXPECTED MAY 2029
-        </div>
-
-        <h3 style="font-size:28px;margin-top:8px">
-          Bachelor of Science in Computer Science
-        </h3>
-
-        <p>
-          Illinois Institute of Technology · Chicago, Illinois
-        </p>
-
-        <div class="chips">
-
-          <span class="tag">
-            GPA 3.85
-          </span>
-
-          <span class="tag">
-            Computer Science
-          </span>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- SKILLS -->
-
-  <section id="skills">
-
-    <div class="wrap">
-
-      <div class="section-head">
-
-        <div>
-
-          <div class="eyebrow">
-            06 · Skills
-          </div>
-
-          <h2>
-            Tools I use.
-          </h2>
-
-        </div>
-
-        <p>
-          Organized by area rather than artificial proficiency percentages.
-        </p>
-
-      </div>
-
-
-      <div class="skill-grid">
-
-
-        <div class="skill-item">
-
-          <strong>
-            Programming
-          </strong>
-
-          <div class="skill-list">
-
-            <span>Python</span>
-            <span>Java</span>
-            <span>JavaScript</span>
-            <span>HTML</span>
-            <span>CSS</span>
-
-          </div>
-
-        </div>
-
-
-        <div class="skill-item">
-
-          <strong>
-            Development Tools
-          </strong>
-
-          <div class="skill-list">
-
-            <span>Visual Studio Code</span>
-            <span>PyCharm</span>
-            <span>IntelliJ IDEA</span>
-            <span>Git / GitHub</span>
-
-          </div>
-
-        </div>
-
-
-        <div class="skill-item">
-
-          <strong>
-            Systems / Infrastructure
-          </strong>
-
-          <div class="skill-list">
-
-            <span>Linux</span>
-            <span>Docker</span>
-            <span>Proxmox</span>
-            <span>Tailscale</span>
-
-          </div>
-
-        </div>
-
-
-        <div class="skill-item">
-
-          <strong>
-            Networking / Cybersecurity
-          </strong>
-
-          <div class="skill-list">
-
-            <span>Wireshark</span>
-            <span>CTFs</span>
-
-          </div>
-
-        </div>
-
-
-        <div class="skill-item">
-
-          <strong>
-            Currently Learning
-          </strong>
-
-          <div class="skill-list">
-
-            <span>Web application security</span>
-            <span>Penetration testing</span>
-            <span>Red teaming</span>
-            <span>Networking</span>
-
-          </div>
-
-        </div>
-
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- CONTACT -->
-
-  <section id="contact" class="contact">
-
-    <div class="wrap">
-
-      <div class="section-head">
-
-        <div>
-
-          <div class="eyebrow">
-            07 · Contact
-          </div>
-
-          <h2>
-            Let's connect.
-          </h2>
-
-        </div>
-
-        <p>
-          I'm always interested in meeting people in software,
-          cybersecurity, and technology.
-        </p>
-
-      </div>
-
-
-      <div class="card">
-
-        <p class="muted">
-          Email
-        </p>
+      <article class="card cyber-card">
 
         <h3>
-          <a href="mailto:loganchambers289@gmail.com">
-            loganchambers289@gmail.com
-          </a>
+          Cybersecurity Club
         </h3>
 
-        <div class="actions">
+        <p>
+          Participation and activities in the cybersecurity club.
+          This section will grow as I gain more hands-on experience.
+        </p>
 
-          <a
-            class="btn"
-            href="https://github.com/logan-chambers"
-            target="_blank"
-            rel="noopener"
-          >
-            GitHub ↗
-          </a>
+      </article>
 
-          <a
-            class="btn"
-            href="https://www.linkedin.com/in/logan-chambers-cybersecurity"
-            target="_blank"
-            rel="noopener"
-          >
-            LinkedIn ↗
-          </a>
+
+      <article class="card cyber-card">
+
+        <h3>
+          CTFs
+        </h3>
+
+        <p>
+          A place to document CTF participation, challenges attempted,
+          and writeups as I complete them.
+        </p>
+
+      </article>
+
+
+      <article class="card cyber-card">
+
+        <h3>
+          CPTC
+        </h3>
+
+        <p>
+          Preparation notes and, eventually, competition experience
+          for the Collegiate Penetration Testing Competition.
+        </p>
+
+      </article>
+
+    </div>
+
+
+    <div style="height:18px"></div>
+
+
+    <div class="grid three">
+
+      <article class="card">
+
+        <h3>
+          Web application security
+        </h3>
+
+        <p>
+          Learning the fundamentals of how web apps get attacked
+          and defended.
+        </p>
+
+      </article>
+
+
+      <article class="card">
+
+        <h3>
+          Penetration testing
+        </h3>
+
+        <p>
+          Studying methodology and tooling — not yet professional
+          experience.
+        </p>
+
+      </article>
+
+
+      <article class="card">
+
+        <h3>
+          Red teaming
+        </h3>
+
+        <p>
+          Early exposure through club activities and self-study.
+        </p>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- EXPERIENCE -->
+<section id="experience">
+
+  <div class="wrap">
+
+    <div class="section-head">
+
+      <div>
+
+        <div class="eyebrow">
+          04 · Experience
+        </div>
+
+        <h2>
+          Work experience.
+        </h2>
+
+      </div>
+
+      <p>
+        Professional experience that has helped me build reliability,
+        communication, and real-world problem solving.
+      </p>
+
+    </div>
+
+
+    <div class="line-list">
+
+      <div class="row">
+
+        <div class="date">
+          MAY 2025 — PRESENT
+        </div>
+
+        <div>
+
+          <div class="role">
+            Food and Beverage Expert
+          </div>
+
+          <div class="company">
+            Target · Glendale Heights, Illinois
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="row">
+
+        <div class="date">
+          NOV 2023 — MAY 2025
+        </div>
+
+        <div>
+
+          <div class="role">
+            Line Cook
+          </div>
+
+          <div class="company">
+            WingStop
+          </div>
 
         </div>
 
@@ -1479,13 +1200,269 @@
 
     </div>
 
-  </section>
+  </div>
+
+</section>
+
+
+<!-- EDUCATION -->
+<section id="education">
+
+  <div class="wrap">
+
+    <div class="section-head">
+
+      <div>
+
+        <div class="eyebrow">
+          05 · Education
+        </div>
+
+        <h2>
+          Illinois Tech.
+        </h2>
+
+      </div>
+
+      <p>
+        Building the computer science foundation that supports my
+        software and cybersecurity interests.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="date">
+        EXPECTED MAY 2029
+      </div>
+
+      <h3 style="font-size:28px;margin-top:8px">
+        Bachelor of Science in Computer Science
+      </h3>
+
+      <p>
+        Illinois Institute of Technology · Chicago, Illinois
+      </p>
+
+      <div class="chips">
+
+        <span class="tag">
+          GPA 3.85
+        </span>
+
+        <span class="tag">
+          Computer Science
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- SKILLS -->
+<section id="skills">
+
+  <div class="wrap">
+
+    <div class="section-head">
+
+      <div>
+
+        <div class="eyebrow">
+          06 · Skills
+        </div>
+
+        <h2>
+          Tools I use.
+        </h2>
+
+      </div>
+
+      <p>
+        Organized by area rather than artificial proficiency percentages.
+      </p>
+
+    </div>
+
+
+    <div class="skill-grid">
+
+
+      <div class="skill-item">
+
+        <strong>
+          Programming
+        </strong>
+
+        <div class="skill-list">
+
+          <span>Python</span>
+          <span>Java</span>
+          <span>JavaScript</span>
+          <span>HTML</span>
+          <span>CSS</span>
+
+        </div>
+
+      </div>
+
+
+      <div class="skill-item">
+
+        <strong>
+          Development Tools
+        </strong>
+
+        <div class="skill-list">
+
+          <span>Visual Studio Code</span>
+          <span>PyCharm</span>
+          <span>IntelliJ IDEA</span>
+          <span>Git / GitHub</span>
+
+        </div>
+
+      </div>
+
+
+      <div class="skill-item">
+
+        <strong>
+          Systems / Infrastructure
+        </strong>
+
+        <div class="skill-list">
+
+          <span>Linux</span>
+          <span>Docker</span>
+          <span>Proxmox</span>
+          <span>Tailscale</span>
+
+        </div>
+
+      </div>
+
+
+      <div class="skill-item">
+
+        <strong>
+          Networking / Cybersecurity
+        </strong>
+
+        <div class="skill-list">
+
+          <span>Wireshark</span>
+          <span>CTFs</span>
+          <span>Web Security</span>
+
+        </div>
+
+      </div>
+
+
+      <div class="skill-item">
+
+        <strong>
+          Currently Learning
+        </strong>
+
+        <div class="skill-list">
+
+          <span>Web application security</span>
+          <span>Penetration testing</span>
+          <span>Red teaming</span>
+          <span>Networking</span>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+
+  <div class="wrap">
+
+    <div class="section-head">
+
+      <div>
+
+        <div class="eyebrow">
+          07 · Contact
+        </div>
+
+        <h2>
+          Let's connect.
+        </h2>
+
+      </div>
+
+      <p>
+        I'm always interested in meeting people in software,
+        cybersecurity, and technology.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <p class="muted">
+        Email
+      </p>
+
+      <h3>
+        <a href="mailto:loganchambers289@gmail.com">
+          loganchambers289@gmail.com
+        </a>
+      </h3>
+
+
+      <div class="actions">
+
+        <a
+          class="btn"
+          href="https://github.com/logan-chambers"
+          target="_blank"
+          rel="noopener"
+        >
+          GitHub ↗
+        </a>
+
+        <a
+          class="btn"
+          href="https://www.linkedin.com/in/logan-chambers-cybersecurity"
+          target="_blank"
+          rel="noopener"
+        >
+          LinkedIn ↗
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 
 </main>
 
 
 <!-- FOOTER -->
-
 <footer>
 
   <div class="wrap footer-inner">
@@ -1524,7 +1501,6 @@
 
 
 <!-- PROJECT MODAL -->
-
 <div class="modal" id="modal">
 
   <div class="modal-box">
@@ -1553,7 +1529,6 @@
 
 
     <p id="modalText"></p>
-
 
     <div
       class="chips"
@@ -1587,8 +1562,7 @@ const projects = [
   {
     title: 'Clue Solver',
 
-    text:
-      'A logic engine for the board game Clue/Cluedo. You feed it your hand and the suggestions made during the game; it runs constraint-propagation deduction including elimination from passes, hand-size limits, one-card-per-category in the envelope, and resolving "showed a card but I don’t know which." It tells you the suspect, weapon, and room as soon as the logic nails them down.',
+    text: 'A logic engine for the board game Clue/Cluedo. You feed it your hand and the suggestions made during the game. It runs constraint-propagation deduction using elimination from passes, hand-size limits, one-card-per-category constraints in the envelope, and reasoning around cases where another player showed a card but you do not know which card they showed. The goal is to determine the suspect, weapon, and room as soon as the available information makes the solution logically certain.',
 
     tags: [
       'HTML',
@@ -1596,42 +1570,39 @@ const projects = [
       'Logic Engine'
     ],
 
-    github:
-      'https://github.com/logan-chambers/clue-solver'
+    github: 'https://github.com/logan-chambers/clue-solver'
   },
 
 
   {
     title: 'Retro Terminal Portfolio',
 
-    text:
-      'A portfolio site styled as an interactive retro terminal. It boots with a fake initialization sequence and ASCII logo, then drops you at a command prompt. Visitors explore the portfolio by typing commands instead of scrolling through a traditional page.',
+    text: 'A portfolio site designed as an interactive retro terminal. The experience begins with a fake initialization sequence and ASCII logo before dropping the visitor into a command prompt. Instead of navigating a traditional scrolling portfolio, visitors can explore projects, skills, experience, and other information by typing commands.',
 
     tags: [
       'HTML',
       'JavaScript',
-      'CSS'
+      'CSS',
+      'Interactive UI'
     ],
 
-    github:
-      'https://github.com/logan-chambers/terminal-portfolio'
+    github: 'https://github.com/logan-chambers/terminal-portfolio'
   },
 
 
   {
     title: 'Sprout Budget',
 
-    text:
-      'A playful, full-featured budgeting app demo in the spirit of tools like Copilot Finance. It includes a dashboard, transactions, category budgets, recurring bill detection, and net worth and spending trend charts. The app runs on realistic sample data rather than a real bank connection. This is a frontend demo focused on UI/UX and data visualization, with all data held in memory.',
+    text: 'A playful, full-featured budgeting app demo inspired by modern personal-finance tools such as Copilot Finance. It includes a financial dashboard, transaction history, category budgets, recurring bill detection, net worth tracking, and spending trend charts. The application uses realistic sample data rather than a real bank connection. It is a frontend-focused project designed to demonstrate UI/UX, data visualization, and interactive financial dashboards, with all data held in memory.',
 
     tags: [
       'HTML',
       'JavaScript',
-      'Data Visualization'
+      'Data Visualization',
+      'UI/UX'
     ],
 
-    github:
-      'https://github.com/logan-chambers/sprout-budget'
+    github: 'https://github.com/logan-chambers/sprout-budget'
   }
 
 ];
@@ -1685,17 +1656,20 @@ document
   });
 
 
-document
-  .getElementById('close')
+document.getElementById('close')
   .onclick = () => {
+
     modal.classList.remove('open');
+
   };
 
 
 modal.addEventListener('click', event => {
 
   if(event.target === modal){
+
     modal.classList.remove('open');
+
   }
 
 });
@@ -1704,7 +1678,9 @@ modal.addEventListener('click', event => {
 document.addEventListener('keydown', event => {
 
   if(event.key === 'Escape'){
+
     modal.classList.remove('open');
+
   }
 
 });
@@ -1714,13 +1690,10 @@ const nav =
   document.getElementById('navInner');
 
 
-document
-  .getElementById('menu')
+document.getElementById('menu')
   .onclick = () => {
 
-    nav.classList.toggle(
-      'mobile-open'
-    );
+    nav.classList.toggle('mobile-open');
 
   };
 
@@ -1730,9 +1703,9 @@ document
   .forEach(link => {
 
     link.onclick = () => {
-      nav.classList.remove(
-        'mobile-open'
-      );
+
+      nav.classList.remove('mobile-open');
+
     };
 
   });
@@ -1742,13 +1715,12 @@ const links =
   [...document.querySelectorAll('.nav-link')];
 
 const sections =
-  [...document.querySelectorAll(
-    'main section[id]'
-  )];
+  [...document.querySelectorAll('main section[id]')];
 
 
 const observer =
   new IntersectionObserver(
+
     entries => {
 
       entries.forEach(entry => {
@@ -1758,9 +1730,12 @@ const observer =
           links.forEach(link => {
 
             link.classList.toggle(
+
               'active',
+
               link.getAttribute('href') ===
               '#' + entry.target.id
+
             );
 
           });
@@ -1770,19 +1745,21 @@ const observer =
       });
 
     },
+
     {
-      rootMargin:
-        '-30% 0px -60% 0px'
+      rootMargin:'-30% 0px -60% 0px'
     }
+
   );
 
 
 sections.forEach(section => {
+
   observer.observe(section);
+
 });
 
 </script>
 
 </body>
 </html>
-```
